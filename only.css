@@ -57,6 +57,21 @@ body {
     
 }
 
+.navigation input[type=text] {
+	margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: #ecf2f9;
+    border: 1px solid #3e7bc1;
+    width: 30%;
+	float: right;
+    padding: 12px;
+    border-radius: 10px;
+    resize: vertical;
+    font-family: Helvetica;
+    font-size: 12pt;
+    opacity: 1;
+}
+
 table {
     border-collapse: collapse;
     border-color: #ffffff;
@@ -175,7 +190,7 @@ th {
 	padding: 20px;
 }
 
-input, textarea {
+.modalWindow input, textarea {
     margin-top: 5px;
     margin-bottom: 5px;
     background-color: #ecf2f9;

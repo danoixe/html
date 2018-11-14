@@ -123,5 +123,15 @@ $('#deleteDebt').click( function() {
         alert('undefined');
 });
 
+//szukanie
+
+  $(".navigation input").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#tableDebt tbody tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+
+
 });
  

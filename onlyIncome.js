@@ -50,30 +50,7 @@ $('#saveIncome').click(function() {
 $('#cancelIncome').click(function() {
 	closeModal($('#addIncomeWindow'));
 });
-/*	
-function addRow2($myTable){
-    var p = $('#addIncomeWindow .person').val();
-    var a = $('#addIncomeWindow .amount').val();
-    var d = $('#addIncomeWindow .description').val();
-    
-	$($myTable).find('tbody')
-    .append($('<tr>')
-        .append($('<td>')
-            .append(p)
-             )
-		.append($('<td>')
-            .append(a)
-             )
-		.append($('<td>')
-            .append('i')
-             )    
-    );
-    
-    $('#addIncomeWindow .person').val('');
-	$('#addIncomeWindow .amount').val('');
-	$('#addIncomeWindow .description').val('');
-}	
-*/
+
 $("#editIncome").click(function() {
 	selectedRow = getRow();
 	
@@ -111,6 +88,15 @@ $('#deleteIncome').click( function() {
     else
         alert('undefined');
 });
+
+//szukanie
+
+  $(".navigation input").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#tableIncome tbody tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
 
 });
  

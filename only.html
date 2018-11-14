@@ -6,12 +6,12 @@
 		<script type="text/javascript" src="onlyDebt.js" ></script>
 		<script type="text/javascript" src="onlyIncome.js" ></script>
 		<link rel="icon" type="image/png" href="emka.png">
-        <title>OnlyMoney</title>		
+        <title>Money Manager</title>		
     </head>
 	
     <body>   
     <div id = "header" class="section">
-        <p>Siup!</p>
+        <p>Manager</p>
     </div>
     
     <!--Strona Główna-->
@@ -26,11 +26,12 @@
 	<div id = "header" class="section">
         <p>Do oddania</p>
     </div>
-	
+	<div  class = "navigation">
        <button class="menuButton" onclick="go('debt','menu')">Strona główna</button><br />
        <button class="actionButton" id="addDebt" onclick="openModal('addDebtWindow')">Dodaj</button>
        <button class="actionButton" id="editDebt">Edytuj</button>
        <button class="actionButton" id="deleteDebt" >Usuń</button>
+	   <input type="text" placeholder="Szukaj..">
        
        <table id = "tableDebt" class = "tableMoney">
             <thead>
@@ -41,6 +42,7 @@
                 <tr><td>Robert</td><td>40</td><td>i</td></tr>
             </tbody>
        </table><br/>
+	   </div>
        
     </div>   
     
@@ -95,11 +97,13 @@
         <p>Do otrzymania</p>
     </div>
 	
+	<div  class = "navigation">
        <button class="menuButton" onclick="go('income','menu')">Strona główna</button><br />
        <button class="actionButton" id="addIncome" onclick="openModal('addIncomeWindow')">Dodaj</button>
        <button class="actionButton" id="editIncome">Edytuj</button>
        <button class="actionButton" id="deleteIncome" >Usuń</button>
-       
+	   <input type="text" placeholder="Szukaj..">
+    </div>   
        <table id = "tableIncome" class = "tableMoney">
             <thead>
                 <tr><th>Osoba</th><th>Kwota</th><th>Info</th></tr>
