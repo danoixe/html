@@ -1,0 +1,195 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Helvetica, sans-serif;
+    font-size: 13pt;
+    background-color: white;
+    padding: 20px;
+    margin: 0;
+}
+.submit{
+    font-family: Helvetica;
+    font-size:13pt;
+    background-color: #b0c4de;
+    margin-top: 10px;
+}
+
+.page {
+    display: none;
+}
+
+.menuButton {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding:0.5em 1.2em;
+    background-color: #3e7bc1;
+    border-radius: 20px;
+    font-size:13pt;
+    color:#ffffff;
+    font-family: Helvetica;
+    box-shadow: none;
+    border-style: solid;
+    border-color: #3e7bc1;
+    transition: all 0.1s;
+}
+.menuButton:hover {
+    border-color: #ffffff;
+    
+}
+
+.actionButton {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding:0.3em 1em;
+    background-color: #3e7bc1;
+    border-radius: 20px;
+    font-size:11pt;
+    color:#ffffff;
+    box-shadow: none;
+    border-style: solid;
+    border-color: #3e7bc1;
+    transition: all 0.1s;
+}
+.actionButton:hover {
+    border-color: #ffffff;
+    
+}
+
+table {
+    border-collapse: collapse;
+    border-color: #ffffff;
+    width:100%;
+    text-align: center;
+    margin-top: 10px;
+    color: #000000;
+    font-family: Verdana;
+    border-radius: 10px;
+	table-layout: fixed;
+}
+
+td, th {
+    border-left: 2px solid;
+    border-right: 2px solid;
+    border-color: #ffffff;
+    padding: 15px;
+    
+}
+
+td:nth-child(1), th:nth-child(1) {
+	width:30%;
+}
+td:nth-child(2), th:nth-child(2) {
+	width:20%;
+}
+td:nth-child(3), th:nth-child(3) {
+	width:50%;
+}
+
+tr {
+    transition: all 0.1s;
+}
+tr:nth-child(even) {
+    background-color: #d8e5f3;
+}
+tr:nth-child(odd) {
+    background-color: #ecf2f9;
+}
+
+tr.highlight { background-color: #c7c9d1; }
+
+.test {
+    background-color: #000000;
+}
+
+th {
+    background-color: #73798c;
+    font-weight: bold;
+    border-bottom: 3px solid #ffffff;
+    border-color: #ffffff;
+    color:#ffffff;
+}
+
+.tooltip .tooltiptext{
+	visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+ 
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+   
+}
+
+.tooltip:hover .tooltiptext{
+	visibility: visible;
+}
+
+
+
+.modalWindow {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    /* Fallback color */
+    background-color: rgba(255, 255, 255, 0.6); /* Black w/ opacity */
+    font-family: Helvetica, sans-serif;
+    
+}
+
+.modalContent {
+    background-color: rgba(255, 255, 255, 0.95);
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 0;
+    width: 70%; /* Could be more or less, depending on screen size */
+    box-shadow: 5px 5px 5px #aaaaaa; 
+    border-radius: 10px;
+	max-width: 500px;
+}
+
+.modal-header {
+    padding-top:2px;
+    padding-bottom: 2px;
+    padding-left: 12px;
+    margin: 0;
+    margin-left:0;
+    margin-bottom: 8px;
+    background-color: #3e7bc1;
+    color: white;
+    font-size: 11pt;
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.modal-body {
+    padding: 12px;
+	padding: 20px;
+}
+
+input, textarea {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: #ecf2f9;
+    border: 1px solid #3e7bc1;
+    width: 80%;
+    padding: 12px;
+    border-radius: 4px;
+    resize: vertical;
+    font-family: Helvetica;
+    font-size: 10pt;
+    opacity: 1;
+    
+}
+
+textarea {
+    height:25%;
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<link rel="stylesheet" href="only.css">		
+		<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="onlyDebt.js" ></script>
+		<script type="text/javascript" src="onlyIncome.js" ></script>
+		<link rel="icon" type="image/png" href="emka.png">
+        <title>OnlyMoney</title>		
+    </head>
+	
+    <body>   
+    <div id = "header" class="section">
+        <p>Siup!</p>
+    </div>
+    
+    <!--Strona Główna-->
+    <div id="menu">
+        <button class="menuButton" onclick="go('menu','debt')">Długi</button>
+        <button class="menuButton" onclick="go('menu','income')">Należności</button><br />
+    </div>
+  
+    
+    <!--Okno DŁUG-->
+    <div class="page" id="debt">
+	<div id = "header" class="section">
+        <p>Do oddania</p>
+    </div>
+	
+       <button class="menuButton" onclick="go('debt','menu')">Strona główna</button><br />
+       <button class="actionButton" id="addDebt" onclick="openModal('addDebtWindow')">Dodaj</button>
+       <button class="actionButton" id="editDebt">Edytuj</button>
+       <button class="actionButton" id="deleteDebt" >Usuń</button>
+       
+       <table id = "tableDebt" class = "tableMoney">
+            <thead>
+                <tr><th>Osoba</th><th>Kwota</th><th>Info</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>John</td><td>200</td><td class="tooltip">i <span class="tooltiptext">tescik</span></td></tr>
+                <tr><td>Robert</td><td>40</td><td>i</td></tr>
+            </tbody>
+       </table><br/>
+       
+    </div>   
+    
+    <!--Dodawanie długu-->
+    <div class="modalWindow" id="addDebtWindow">
+        <div class="modalContent">
+            <div class="modal-header">
+                <h2>Dodawanie długu</h2>
+            </div>
+            <div class="modal-body"> 
+                <input name="name" placeholder="Osoba" type="text" class="person" /><br/>
+                <input name="kwota" placeholder="Kwota" class="amount" /><br/>
+                <textarea name="message" placeholder="Opis" class="description"></textarea><br/>
+                <button class="actionButton" id = "saveDebt" >Zapisz</button>
+                <button class="actionButton" id = "cancelDebt">Anuluj</button>
+            </div>
+        </div>
+    </div>
+    
+    <!--Edycja długu-->
+	<div class="modalWindow" id="editDebtWindow">
+        <div class="modalContent">
+            <div class="modal-header">
+                <h2>Edycja długu</h2>
+            </div>
+            <div class="modal-body"> 
+                <input name="name" type="text" id="personOfDebt" /><br/>
+                <input name="kwota" id="amountOfDebt" /><br/>
+                <textarea name="message" placeholder="Opis" id="descriptionOfDebt"></textarea><br/>
+                <button class="actionButton" id = "saveDebtChanges">Zapisz</button>
+                <button class="actionButton" id = "cancelDebtChanges">Anuluj</button>
+            </div>
+        </div>
+    </div>
+    <!--<script>
+     var table = document.getElementById("tableDebt"),rIndex;
+            
+            
+           // edit the row
+            function editRow()
+            {
+                openModal();
+                
+            }
+        
+    </script>-->
+    
+    
+    <!--Okno NALEŻNOŚĆ-->
+    <div class="page" id="income">
+	<div id = "header" class="section">
+        <p>Do otrzymania</p>
+    </div>
+	
+       <button class="menuButton" onclick="go('income','menu')">Strona główna</button><br />
+       <button class="actionButton" id="addIncome" onclick="openModal('addIncomeWindow')">Dodaj</button>
+       <button class="actionButton" id="editIncome">Edytuj</button>
+       <button class="actionButton" id="deleteIncome" >Usuń</button>
+       
+       <table id = "tableIncome" class = "tableMoney">
+            <thead>
+                <tr><th>Osoba</th><th>Kwota</th><th>Info</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>John</td><td>200</td><td>i</td></tr>
+                <tr><td>Robert</td><td>40</td><td>i</td></tr>
+            </tbody>
+       </table><br/>
+       
+    </div>   
+    
+    <!--Dodawanie należności-->
+    <div class="modalWindow" id="addIncomeWindow">
+        <div class="modalContent">
+            <div class="modal-header">
+                <h2>Dodawanie długu</h2>
+            </div>
+            <div class="modal-body"> 
+                <input name="name" placeholder="Osoba" type="text" class="person" /><br/>
+                <input name="kwota" placeholder="Kwota" class="amount" /><br/>
+                <textarea name="message" placeholder="Opis" class="description"></textarea><br/>
+                <button class="actionButton" id = "saveIncome" >Zapisz</button>
+                <button class="actionButton" id = "cancelIncome">Anuluj</button>
+            </div>
+        </div>
+    </div>
+    
+    <!--Edycja należności-->
+	<div class="modalWindow" id="editIncomeWindow">
+        <div class="modalContent">
+            <div class="modal-header">
+                <h2>Edycja długu</h2>
+            </div>
+            <div class="modal-body"> 
+                <input name="name" type="text" id="personOfIncome" /><br/>
+                <input name="kwota" id="amountOfIncome" /><br/>
+                <textarea name="message" placeholder="Opis" id="descriptionOfIncome"></textarea><br/>
+                <button class="actionButton" id = "saveIncomeChanges">Zapisz</button>
+                <button class="actionButton" id = "cancelIncomeChanges">Anuluj</button>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>
